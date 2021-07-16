@@ -14,9 +14,7 @@ let fakeDuration = 600;
 
 outline.style.strokeDashoffset = outlineLength;
 outline.style.strokeDasharray = outlineLength;
-timeDisplay.textContent = `${Math.floor(fakeDuration / 60)}:${Math.floor(
-  fakeDuration % 60
-)}`;
+timeDisplay.textContent = `${Math.floor(fakeDuration / 60)}:${Math.floor(fakeDuration % 60)}`;
 
 sounds.forEach(sound => {
   sound.addEventListener("click", function() {
@@ -39,7 +37,6 @@ replay.addEventListener("click", function() {
 const restartSong = song =>{
     let currentTime = song.currentTime;
     song.currentTime = 0;
-    console.log("ciao")
 
 }
 
@@ -63,6 +60,7 @@ const checkPlaying = song => {
     play.src = "./svg/play.svg";
   }
 };
+
 
 song.ontimeupdate = function() {
   let currentTime = song.currentTime;
